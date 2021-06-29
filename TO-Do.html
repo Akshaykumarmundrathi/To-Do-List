@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>TODO</title>
+    </head>
+<body>
+    <input type="text" id="new-item" >
+    <button onclick="additem()">Add Item</button>
+    <!--create a TO-Do list-->
+<script type="text/javascript">
+
+var listItems =['Install libraries','Write Codes'];
+</script>
+<script type="text/javascript">
+function additem(){
+    var tempItem= document.getElementById("new-item").value
+    listItems.push(tempItem);
+    displayList(tempItem);
+    document.getElementById("new-item").value='';
+}
+</script>
+
+    <!--insert default list items-->
+<div id="display">
+    <h3>
+        Your TODO :
+    </h3>
+    <ul>
+        <script type="text/javascript">
+        listItems.forEach(displayList);
+        function displayList(item){
+            document.getElementById("display").innerHTML += "<li>"+item+"<li"
+        }
+        </script>
+    </ul>
+</div>
+
+    <!--display the list-->
+
+    <!--add items to the list-->
+</body>
+    </html>
